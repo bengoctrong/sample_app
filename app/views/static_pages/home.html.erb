@@ -1,7 +1,13 @@
-<% provide :title, t(".title") %>
-<h1><%= t ".hello" %></h1>
-<p>
-  <%= t ".line1" %>
-  <%= link_to t(".tutorial"), t(".tutorial_link") %>
-  <%= t ".line2" %>
-</p>
+<div class="center jumbotron">
+  <% provide :title, t(".title") %>
+  <h1><%= t ".hello" %></h1>
+
+  <h2>
+    <%= t ".line1" %>
+    <%= link_to t(".tutorial"), t(".tutorial_link") %>
+    <%= t ".line2" %>
+  </h2>
+
+  <%= link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+<%= link_to image_tag("rails.png", alt: t(".logo")), t(".logo_link") %>

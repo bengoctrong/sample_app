@@ -33,6 +33,22 @@ en:
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
+    footer:
+      line1: "The"
+      tutorial: "Ruby on Rails Tutorial"
+      tutorial_link: "http://www.railstutorial.org/"
+      line2: "by"
+      name: "Michael Hartl"
+      name_link: "http://www.michaelhartl.com/"
+      about: "About"
+      contact: "Contact"
+      news: "News"
+      news_link: "http://news.railstutorial.org/"
+    header:
+      app: "sampe app"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
   static_pages:
     home:
       title: "Home"
@@ -41,6 +57,9 @@ en:
       tutorial: "Ruby on Rails Tutorial"
       tutorial_link: "http://www.railstutorial.org/"
       line2: "sample application."
+      signup: "Sign up now!"
+      logo: "Rails logo"
+      logo_link: "http://rubyonrails.org/"
     help:
       title: "Help"
       hello: "Help page"
@@ -67,3 +86,13 @@ en:
       RoR: "Ruby on Rails"
       RoR_link: "http://rubyonrails.org/"
       line5: "This is the sample application for the tutorial."
+    contact:
+      title: "Contact"
+      hello: "Contact page"
+      line1: "Contact the Ruby on Rails Tutorial about the sample app at the"
+      contact: "contact page"
+      contact_link: "http://www.railstutorial.org/contact"
+  users:
+    new:
+      title: "Sign Up"
+      hello: "Sign up page"
