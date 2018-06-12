@@ -7,3 +7,4 @@ password:
 gavatar:
   size: 80
 remember_me: "1"
+password_reset_expired: 2
