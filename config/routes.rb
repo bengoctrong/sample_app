@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :password_resets, except: [:index, :show, :destroy]
   resources :account_activations, only: [:edit]
   resources :users
   get "/signup", to: "users#new"
