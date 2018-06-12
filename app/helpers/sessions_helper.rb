@@ -3,6 +3,17 @@ module SessionsHelper
     session[:user_id] = user.id
   end
 
+  def log_in_activated? user, remember
+    if user.activated?
+      log_in user
+      remember == Settings.remember_me ? remember(user) : forget(user)
+      redirect_back_or user
+    else
+      flash[:warning] = t(".message1") + t(".message2")
+      redirect_to root_url
+    end
+  end
+
   def current_user? user
     user == current_user
   end
@@ -12,7 +23,7 @@ module SessionsHelper
       @current_user ||= User.find_by id: user_id
     elsif (user_id = cookies.signed[:user_id])
       user = User.find_by id: user_id
-      if user && user.authenticated?(cookies[:remember_token])
+      if user && user.authenticated?(:remember, cookies[:remember_token])
         log_in user
         @current_user = user
       end
