@@ -5,9 +5,7 @@ class SessionsController < ApplicationController
     session = params[:session]
     user = User.find_by email: session[:email].downcase
     if user && user.authenticate(session[:password])
-      log_in user
-      session[:remember_me] == Settings.remember_me ? remember(user) : forget(user)
-      redirect_to user
+      log_in_activated? user, remember: session[:remember_me]
     else
       flash.now[:danger] = t ".danger"
       render :new
