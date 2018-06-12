@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(session[:password])
       log_in user
       session[:remember_me] == Settings.remember_me ? remember(user) : forget(user)
-      redirect_to user
+      redirect_back_or user
     else
       flash.now[:danger] = t ".danger"
       render :new

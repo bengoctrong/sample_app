@@ -53,6 +53,7 @@ en:
       profile: "Profile"
       settings: "Settings"
       logout: "Log out"
+      account: "Account"
   static_pages:
     home:
       title: "Home"
@@ -97,18 +98,37 @@ en:
       contact: "contact page"
       contact_link: "http://www.railstutorial.org/contact"
   users:
-    new:
-      title: "Sign Up"
-      hello: "Sign up"
+    user:
+      delete: "Delete"
+      you_sure: "You sure?"
+    form:
       name: "Name"
       email: "Email"
       password: "Password"
       confirm: "Confirmation"
-      create: "Create my account"
+    index:
+      title: "All users"
+      hello: "All users"
+    new:
+      title: "Sign Up"
+      hello: "Sign up"
+      button_text: "Create my account"
     show:
       user_nil: "User not found!!"
     create:
       welcome: "Welcome to the Sample App!"
+    edit:
+      title: "Edit user"
+      hello: "Edit user"
+      button_text: "Save changes"
+      avatar_change: "Change"
+      user_nil: "User not found!!"
+      login: "Please log in."
+    update:
+      success: "Profile updated"
+    destroy:
+      success: "User deleted"
+      warning: "Can't delete "
   shared:
     error_messages:
       message: "The form contains"
