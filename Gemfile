@@ -24,6 +24,10 @@ gem "jquery-rails"
 gem "faker"
 gem "will_paginate"
 gem "bootstrap-will_paginate"
+gem "carrierwave", "0.11.2"
+gem "mini_magick", "4.5.1"
+gem "fog", "1.38.0"
+gem "i18n-js"
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "capybara", "~> 2.13"
