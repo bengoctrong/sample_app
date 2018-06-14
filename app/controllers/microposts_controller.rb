@@ -14,8 +14,9 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
-    @micropost.destroy
-    flash[:success] = t ".success"
+    status = :warning
+    status = :success if @micropost.destroy
+    flash[status] = t ".#{status}"
     redirect_to request.referer || root_url
   end
 

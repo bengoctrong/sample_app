@@ -174,7 +174,18 @@ en:
       success: "Profile updated"
     destroy:
       success: "User deleted"
-      warning: "Can't delete "
+      warning: "Delete failed"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
+    following:
+      following: "Following"
+    followers:
+      followers: "Followers"
+    show_follow:
+      view_profile: "view my profile"
+      microposts: "Microposts: %{count}"
   shared:
     error_messages:
       message: "The form contains"
@@ -185,6 +196,9 @@ en:
     user_info:
       view_info: "view my profile"
       micropost: "micropost"
+    stats:
+      following: "following"
+      followers: "followers"
   sessions:
     new:
       title: "Log in"
@@ -205,6 +219,7 @@ en:
       success: "Micropost created!"
     destroy:
       success: "Micropost deleted"
+      warning: "Delete failed"
     micropost:
       posted: "Posted %{time} ago."
       delete: "delete"
