@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   resources :password_resets, except: [:index, :show, :destroy]
   resources :account_activations, only: [:edit]
-  resources :users
+  resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
   get "/login", to: "sessions#new"
